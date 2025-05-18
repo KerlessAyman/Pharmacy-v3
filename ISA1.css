@@ -1,0 +1,179 @@
+:root {
+  --primary-color: #2E7D32; /* Pharmacy green */
+  --primary-light: #81C784; /* Light green */
+  --primary-lighter: #E8F5E9; /* Very light green */
+  --primary-dark: #1B5E20; /* Dark green */
+  --accent-color: #4CAF50; /* Brighter green */
+  --text-on-primary: #FFFFFF; /* White text */
+  --text-color: #333333; /* Dark text */
+  --border-color: #BDBDBD; /* Light gray */
+  --error-color: #D32F2F; /* Red for errors */
+  --success-color: #388E3C; /* Green for success */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-lighter);
+  color: var(--text-color);
+  line-height: 1.6;
+  /* Add background image */
+  background-image: url('E:/Web/Tubia Pharmacy/web des/002.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.upload-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border-top: 6px solid var(--primary-color);
+}
+
+h1 {
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#uploadForm {
+  margin-bottom: 30px;
+}
+
+.file-input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.file-input-label {
+  display: block;
+  padding: 15px;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-input-label:hover {
+  border-color: var(--primary-light);
+  background-color: rgba(129, 199, 132, 0.1);
+}
+
+.file-input-label.drag-over {
+  border-color: var(--primary-color);
+  background-color: rgba(129, 199, 132, 0.2);
+}
+
+#fileInput {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.file-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--primary-dark);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+#message {
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.success {
+  background-color: rgba(56, 142, 60, 0.2);
+  color: var(--success-color);
+  border-left: 4px solid var(--success-color);
+}
+
+.error {
+  background-color: rgba(211, 47, 47, 0.2);
+  color: var(--error-color);
+  border-left: 4px solid var(--error-color);
+}
+
+.links {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.links a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Animation for successful upload */
+@keyframes buttonPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.button-success {
+  background-color: var(--success-color);
+  animation: buttonPulse 0.5s ease;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .upload-box {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,191 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button {
+    margin: 5px;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f8f5;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container for orders */
+.orders-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.orders-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.orders-header h1 {
+    color: #2e7d32;
+    /* Strong Green */
+    font-size: 36px;
+}
+
+/* Search bar */
+.search-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-filter input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #2e7d32;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-filter button {
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+}
+
+.search-filter button:hover {
+    background-color: #1b5e20;
+    /* Darker green on hover */
+}
+
+/* Orders Table */
+.orders-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-list th,
+.orders-list td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.orders-list th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.orders-list tr:hover {
+    background-color: #f1f8f5;
+}
+
+.orders-list td button {
+    padding: 6px 12px;
+    background-color: #66bb6a;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.orders-list td button:hover {
+    background-color: #338a3e;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #2e7d32;
+}
+
+.order-actions {
+    margin-top: 20px;
+}
+
+.order-actions button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-actions button:hover {
+    background-color: #1b5e20;
+}
+
+/* Order details text */
+#orderDetails p,
+#orderDetails ul {
+    text-align: left;
+    margin: 10px 0;
+}
