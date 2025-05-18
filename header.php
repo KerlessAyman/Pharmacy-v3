@@ -227,7 +227,7 @@
         </a>
         
         <form class="search-bar" action="search.php" method="GET">
-            <input type="text" name="query" placeholder="Search products..." required>
+            <input type="text" name="query" placeholder="Search products...(all products)" required>
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
         
